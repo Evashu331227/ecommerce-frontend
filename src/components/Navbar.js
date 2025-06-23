@@ -49,15 +49,21 @@ const Navbar = () => {
         </NavLink>
       </div>
 
-      {/* Right Cart Info */}
-      <NavLink
-        to="/cart"
-        style={({ isActive }) =>
-          isActive ? { ...linkStyle, ...activeStyle } : linkStyle
-        }
-      >
-        🛒 Cart ({cartItems.length})
-      </NavLink>
+      {/* Right Side: Cart Info + Greeting */}
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <NavLink
+          to="/cart"
+          style={({ isActive }) =>
+            isActive ? { ...linkStyle, ...activeStyle } : linkStyle
+          }
+        >
+          🛒 Cart ({cartItems.length})
+        </NavLink>
+
+        <span style={{ marginLeft: "15px", color: "#0f0" }}>
+          👋 Hello, Guest!
+        </span>
+      </div>
     </nav>
   );
 };
