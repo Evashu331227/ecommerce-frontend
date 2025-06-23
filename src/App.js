@@ -7,9 +7,14 @@ import HomePage from "./pages/HomePage";      // ✅ Welcome screen
 import CheckoutPage from "./pages/CheckoutPage"; // ✅ Add this page
 
 function App() {
+  console.log("✅ App.js has loaded!");  // NEW LOG LINE
+
   return (
     <Router>
       <Navbar />
+      <h1 style={{ textAlign: "center", margin: "10px 0" }}>
+        🛍️ Welcome to Evashu's E-Commerce Store!
+      </h1>
 
       <Routes>
         {/* 🏠 Home Route */}
